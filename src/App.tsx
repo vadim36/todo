@@ -1,11 +1,8 @@
 import { FC } from 'react'
+import { TodoDesk } from './components/TodoDesk'
 
 export const App:FC = () => {
-  return (
-    <>
-      WORK!
-    </>
-  )
+  return <TodoDesk/>
 }
 
 export default App

@@ -4,3 +4,8 @@ interface Todo {
   body: string,
   completed: boolean
 }
+
+interface ICreateForm {
+  title: string,
+  body: string
+}

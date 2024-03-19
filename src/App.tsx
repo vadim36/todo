@@ -1,6 +1,6 @@
 import { FC, useState } from 'react'
 import { TodoDesk } from './components/TodoDesk'
-import { CreateTodoForm } from './components/CreateTodoForm'
+import { TodoForm } from './components/TodoForm'
 
 export const App:FC = () => {
   const [todos, setTodos] = useState<Todo[]>([
@@ -34,9 +34,10 @@ export const App:FC = () => {
   
   return (
     <>
-      <CreateTodoForm createTask={createTask}/>
+      <TodoForm createTask={createTask}/>
       <TodoDesk
         list={todos}
+        setList={setTodos}
         completeTask={completeTask}
         deleteTask={deleteTask}
       />

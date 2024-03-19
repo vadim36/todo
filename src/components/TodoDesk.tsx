@@ -1,14 +1,16 @@
-import {FC, useState, ReactNode} from 'react'
+import {Dispatch, FC, ReactNode, SetStateAction} from 'react'
 import { TodoItem } from './TodoItem'
 
 interface TodoDeskProps {
   list: Todo[],
+  setList: Dispatch<SetStateAction<Todo[]>>,
   completeTask: (id: number, completed: boolean) => void,
   deleteTask: (id: number) => void
 }
 
 export const TodoDesk:FC<TodoDeskProps> = ({
   list,
+  setList,
   completeTask,
   deleteTask
 }) => {
@@ -22,6 +24,8 @@ export const TodoDesk:FC<TodoDeskProps> = ({
           return <TodoItem 
             key={todo.id} 
             data={todo}
+            list={list}
+            setData={setList}
             completeTask={completeTask}
             deleteTask={deleteTask}
           />

@@ -1,10 +1,10 @@
 import {ChangeEvent, FC, FormEvent, useState} from 'react'
 
-interface CreateTodoFormProps {
+interface TodoFormProps {
   createTask: (data: ICreateForm) => void
 }
 
-export const CreateTodoForm:FC<CreateTodoFormProps> = ({createTask}) => {
+export const TodoForm:FC<TodoFormProps> = ({createTask}) => {
   const [formData, setFormData] = useState<ICreateForm>({
     title: '',
     body: ''

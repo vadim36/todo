@@ -14,6 +14,10 @@ export const TodoDesk:FC<TodoDeskProps> = ({
   completeTask,
   deleteTask
 }) => {
+  function deleteCompletedTask():void {
+    return setList(list.filter((todo: Todo):boolean => !todo.completed))
+  }
+
   return (
     <section aria-label='Todo items' className='flex flex-col items-center'>
       <h1 className='text-4xl font-bold font-mono'>
@@ -31,6 +35,10 @@ export const TodoDesk:FC<TodoDeskProps> = ({
           />
         })}
       </ul>
+      <button className='text-white bg-red-500 text-2xl p-2 rounded-lg'
+        onClick={deleteCompletedTask}>
+        Удалить законченные задачи
+      </button>
     </section>
   )
 }

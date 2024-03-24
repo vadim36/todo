@@ -1,6 +1,6 @@
 import {FC, ReactNode, createElement} from 'react'
 import { Routes, Route } from 'react-router-dom'
-import { routes } from '../router'
+import { routes } from '@/shared/config'
 
 export const AppRouter:FC = () => {
   return (

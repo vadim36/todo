@@ -1,1 +1,1 @@
-export {TaskPage} from './components'
+export {TaskPage} from './components/TaskPage'

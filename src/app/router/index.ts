@@ -1,8 +1,9 @@
-import { StartupPage } from '../../pages/Startup/index';
-import { TaskPage } from '../../pages/Task/index';
+import { StartupPage } from '@/pages/Startup';
+import { TaskPage } from '@/pages/Task';
+import { Paths } from '../lib/helpers/paths';
 
 export const routes: TRoute[] = [
-  { path: 'tasks/', element: StartupPage },
-  { path: 'tasks/:id', element: TaskPage },
-  { path: '*', element: StartupPage }
+  { path: Paths.tasks, element: StartupPage },
+  { path: Paths.task, element: TaskPage },
+  { path: Paths.all, element: StartupPage }
 ]

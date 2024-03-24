@@ -24,6 +24,7 @@ export const AddNewDeskForm:FC<AddNewDeskFormProps> = ({add}) => {
         onChange={(event: ChangeEvent<HTMLInputElement>):void => {
           return setTitle(event.target.value)
         }}
+        maxLength={18}
       />
       <Button>Add new desk</Button>
     </form>

@@ -1,9 +1,10 @@
 import {FC} from 'react'
+import { MainPageLayout } from '@/widgets/layouts/MainPageLayout'
 
 export const StartupPage:FC = () => {
   return (
-    <main>
+    <MainPageLayout>
       Startup
-    </main>
+    </MainPageLayout>
   )
 }

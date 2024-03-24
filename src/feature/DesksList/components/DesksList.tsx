@@ -12,7 +12,7 @@ interface DesksListProps {
 export const DesksList:FC<DesksListProps> = ({desks, className}) => {
   return (
     <List className={className} list={desks} listMap={(desk: IDesk):ReactNode => {
-      return <li>
+      return <li key={desk.id}>
         <Button>
           <NavLink to={`${Paths.desks}${desk.id}`}>
             {desk.title}
